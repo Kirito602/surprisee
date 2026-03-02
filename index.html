@@ -168,9 +168,14 @@ button {
 </style>
 </head>
 <body>
-    <audio autoplay >
-        <source src="Audio/happy_birthday.mp3">
-    </audio>
+<audio id="bgMusic" src="Audio/happy_birthday.mp3" loop></audio>
+
+<script>
+document.body.addEventListener("click", function () {
+  const music = document.getElementById("bgMusic");
+  music.play();
+}, { once: true });
+</script>
 <!-- PAGE 1 (MATCHED STYLE) -->
 <div class="page active" id="page1">
 
@@ -283,4 +288,5 @@ function openEnvelope(el){
 </script>
 
 </body>
+
 </html>
